@@ -33,8 +33,8 @@
                                             <div class="d-flex">
                                                 @if ($jawaban->count() > 0)
                                                 {{-- Hiding button --}}
-                                                @else
                                                 <button class="btn btn-primary mr-2" data-toggle="modal" data-target="#exampleModal"><i class="nav-icon fas fa-paper-plane"></i>&nbsp; Kirim Jawaban</button>
+                                                @else
                                                 @endif
                                                 <a href="{{ route('siswa.tugas.download', $tugas->id) }}" class="btn btn-success btn-sm align-self-center"><i class="nav-icon fas fa-download"></i> &nbsp; Download Tugas</a>
                                             </div>

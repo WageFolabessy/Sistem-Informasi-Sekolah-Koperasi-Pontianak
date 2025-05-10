@@ -80,10 +80,6 @@
                                     @if ($tugas->count() > 0)
                                     <input name="tugas_id" type="text" value="{{ $tugas->id }}" hidden>
                                     <div class="form-group">
-                                        <label for="jawaban">Jawaban</label>
-                                        <input type="text" id="jawaban" name="jawaban" class="form-control @error('jawaban') is-invalid @enderror" placeholder="{{ __('Jawaban tugas') }}">
-                                    </div>
-                                    <div class="form-group">
                                         <label for="file">File Tugas</label>
                                         <div class="input-group">
                                             <div class="custom-file">
@@ -93,10 +89,6 @@
                                         </div>
                                     </div>
                                     @else
-                                    <div class="form-group">
-                                        <label for="jawaban">Jawaban</label>
-                                        <input type="text" id="jawaban" name="jawaban" class="form-control @error('jawaban') is-invalid @enderror" placeholder="{{ __('Jawaban tugas') }}">
-                                    </div>
                                     <div class="form-group">
                                         <label for="file">File Tugas</label>
                                         <div class="input-group">

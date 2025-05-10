@@ -192,7 +192,6 @@ class TugasController extends Controller
         $jawaban = new Jawaban;
         $jawaban->tugas_id = $request->tugas_id;
         $jawaban->siswa_id = $siswa->id;
-        $jawaban->jawaban = $request->jawaban;
         $jawaban->file = $file;
         $jawaban->save();
 

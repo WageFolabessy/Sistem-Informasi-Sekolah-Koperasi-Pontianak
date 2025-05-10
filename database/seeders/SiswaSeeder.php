@@ -22,12 +22,5 @@ class SiswaSeeder extends Seeder
             'alamat' => 'Jl. Komodor Yos Sudarso Gg. Alpokat Indah 5',
         ]);
 
-        DB::table('siswas')->insert([
-            'nama' => 'Endricho',
-            'nis' => '212102428',
-            'kelas_id' => 2,
-            'telp' => '085845214967',
-            'alamat' => 'Jl. Ayani 2',
-        ]);
     }
 }

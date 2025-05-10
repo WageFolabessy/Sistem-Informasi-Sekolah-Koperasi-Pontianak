@@ -130,7 +130,7 @@ class UserController extends Controller
     {
         $guru = Guru::where('user_id', Auth::user()->id)->first();
         $siswa = Siswa::where('user_id', Auth::user()->id)->first();
-        $admin = User::findOrFail(Auth::user()->id);
+        $admin = User::findOrFail(Auth::user()->id)->first();
 
         return view('pages.profile', compact('guru', 'siswa', 'admin'));
     }

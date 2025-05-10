@@ -9,7 +9,7 @@ class Jawaban extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['tugas_id', 'siswa_id', 'jawaban', 'file'];
+    protected $fillable = ['tugas_id', 'siswa_id', 'file'];
 
     public function tugas() {
         return $this->belongsTo(Tugas::class);

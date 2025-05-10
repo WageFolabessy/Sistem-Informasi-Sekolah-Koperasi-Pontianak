@@ -61,14 +61,6 @@ class UserSeeder extends Seeder
             'nis' => '211103765',
         ]);
 
-        DB::table('users')->insert([
-            'name' => 'Endricho',
-            'email' => 'folabessy26@gmail.com',
-            'password' => Hash::make('password'),
-            'roles' => 'siswa',
-            'nis' => '212102428',
-        ]);
-
         // update user_id to guru table as user id
         foreach ($guru as $g) {
             DB::table('gurus')->where('nip', $g->nip)->update([

@@ -106,6 +106,32 @@
                             </form>
                         </div>
                     </div>
+                    @elseif (Auth::user()->roles == 'admin')
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <div class="card">
+                            <form action="{{ route('update.profile') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                @method('PUT')
+                                <div class="card-header d-flex justify-content-between">
+                                    <h4>Edit Profile</h4>
+                                    <a href="{{ route('ubah-password') }}" class="btn btn-primary"><i class="nav-icon fas fa-lock"></i>&nbsp; Ubah password</a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group col-md-12 col-12">
+                                        <label>Nama</label>
+                                        <input name="nama" type="text" class="form-control" value="{{ $admin->name ?? '' }}" required>
+                                    </div>
+                                    <div class="form-group col-md-12 col-12">
+                                        <label>Email</label>
+                                        <input name="email" type="email" class="form-control" value="{{ auth()->user()->email ?? '' }}" required="">
+                                    </div>
+                                </div>
+                                <div class="card-footer text-right">
+                                    <button class="btn btn-primary">Simpan</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                     @endif
                 </div>
             </div>
